@@ -15,25 +15,30 @@ class MainClass extends StatelessWidget {
             //mainAxisSize: MainAxisSize.min, //ekranda kapladığı yer
             crossAxisAlignment:
                 CrossAxisAlignment.stretch, //row hizalama center, end, stretch
-            //mainAxisAlignment:  MainAxisAlignment.center, //spacebetween, center vs.
+            mainAxisAlignment:
+                MainAxisAlignment.spaceEvenly, //spacebetween, center vs.
             children: <Widget>[
               Container(
                   child: Text('asd'),
                   height: 100,
                   width: 200,
                   color: Colors.lime),
-              SizedBox(
-                height: 50,
-              ),
-              Container(
-                child: Text('asd'),
-                height: 100,
-                width: 200,
-                color: Colors.black87,
-              ),
-              SizedBox(
-                height: 50,
-              ),
+              Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Container(
+                      child: Text('asd'),
+                      height: 100,
+                      width: 100,
+                      color: Colors.black54,
+                    ),
+                    Container(
+                      child: Text('asd'),
+                      height: 100,
+                      width: 100,
+                      color: Colors.white70,
+                    ),
+                  ]),
               Container(
                 child: Text('asd'),
                 height: 100,
