@@ -17,7 +17,7 @@ class MainClass extends StatelessWidget {
               mainAxisSize: MainAxisSize.min, //ekranda kapladığı yer
               //crossAxisAlignment:CrossAxisAlignment.center, //row hizalama center, end, stretch
               //mainAxisAlignment:MainAxisAlignment.spaceEvenly, //spacebetween, center vs.
-              children: <Widget>[
+              children: const <Widget>[
                 CircleAvatar(
                   radius: 70.0,
                   backgroundColor: Colors.lime,
@@ -33,47 +33,43 @@ class MainClass extends StatelessWidget {
                       fontSize: 30,
                       color: Colors.white70,
                     )),
-                Container(
+                Divider(
+                  height: 20,
+                  color: Colors.black87,
+                ),
+                Card(
+                  color: Colors.black87,
                   margin: EdgeInsets.fromLTRB(10, 20, 10, 20),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.black87,
-                  ),
                   child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Row(
-                      children: <Widget>[
-                        Icon(
-                          Icons.mail,
-                          size: 80,
-                          color: Colors.white70,
-                        ),
-                        Text('trabzonspor@gmail.com',
-                            style:
-                                TextStyle(fontSize: 40, color: Colors.white70)),
-                      ],
+                    padding: EdgeInsets.all(10.0),
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.mail,
+                        size: 50,
+                        color: Colors.white70,
+                      ),
+                      title: Text('trabzonspor@gmail.com',
+                          style:
+                              TextStyle(fontSize: 40, color: Colors.white70)),
                     ),
                   ),
                 ),
-                Container(
+                Card(
                     margin: EdgeInsets.fromLTRB(10, 10, 10, 20),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.black87,
-                    ),
+                    color: Colors.black87,
                     child: Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Row(children: <Widget>[
-                        Icon(
+                      padding: EdgeInsets.all(10.0),
+                      child: ListTile(
+                        leading: Icon(
                           Icons.telegram,
-                          size: 80,
+                          size: 50,
                           color: Colors.white70,
                         ),
-                        Text('0561 610 61 61',
+                        title: Text('0561 610 61 61',
                             style:
                                 TextStyle(fontSize: 40, color: Colors.white70)),
-                      ]),
-                    ))
+                      ),
+                    )),
               ],
             ),
           ),
