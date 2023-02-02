@@ -11,21 +11,36 @@ class MainClass extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.indigo,
         body: SafeArea(
-          child: Container(
-            alignment: FractionalOffset.bottomRight,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadiusDirectional.circular(15),
-              color: Color.fromARGB(255, 189, 185, 171),
-            ),
-            padding: EdgeInsets.all(18),
-            margin: EdgeInsets.all(18),
-            height: 100,
-            width: 200,
-            //color: Color.fromARGB(255, 189, 185, 171),
-            child: Transform(
-                transform: Matrix4.rotationZ(-6),
-                alignment: Alignment.bottomRight,
-                child: Text('Naberss')),
+          child: Column(
+            //mainAxisSize: MainAxisSize.min, //ekranda kapladığı yer
+            crossAxisAlignment:
+                CrossAxisAlignment.stretch, //row hizalama center, end, stretch
+            //mainAxisAlignment:  MainAxisAlignment.center, //spacebetween, center vs.
+            children: <Widget>[
+              Container(
+                  child: Text('asd'),
+                  height: 100,
+                  width: 200,
+                  color: Colors.lime),
+              SizedBox(
+                height: 50,
+              ),
+              Container(
+                child: Text('asd'),
+                height: 100,
+                width: 200,
+                color: Colors.black87,
+              ),
+              SizedBox(
+                height: 50,
+              ),
+              Container(
+                child: Text('asd'),
+                height: 100,
+                width: 200,
+                color: Colors.cyan,
+              ),
+            ],
           ),
         ),
       ),
